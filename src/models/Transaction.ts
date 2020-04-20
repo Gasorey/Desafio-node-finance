@@ -24,7 +24,8 @@ class Transaction {
   @Column('integer')
   value: number;
 
-  @Column('varchar')
+  @ManyToOne(() => Category)
+  @JoinColumn({ name: 'category_id' })
   category_id: string;
 
   @CreateDateColumn()
@@ -32,10 +33,6 @@ class Transaction {
 
   @UpdateDateColumn()
   updated_at: Date;
-
-  @ManyToOne(() => Category)
-  @JoinColumn({ name: 'category_id' })
-  category: Category;
 }
 
 export default Transaction;

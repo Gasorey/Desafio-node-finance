@@ -19,12 +19,12 @@ export default class CreateTransactions1587322132725
             type: 'varchar',
           },
           {
-            name: 'value',
-            type: 'integer',
-          },
-          {
             name: 'type',
             type: 'varchar',
+          },
+          {
+            name: 'value',
+            type: 'integer',
           },
           {
             name: 'category_id',

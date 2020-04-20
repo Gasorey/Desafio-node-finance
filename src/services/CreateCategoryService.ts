@@ -8,7 +8,9 @@ interface Request {
 export default class CreateCategoryService {
   public async execute({ category }: Request): Promise<Category> {
     const categoryRepository = getRepository(Category);
-    const getCategory = await categoryRepository.findOne(category);
+    const getCategory = await categoryRepository.findOne({
+      where: { title: category },
+    });
 
     if (!getCategory) {
       const newCategory = categoryRepository.create({ title: category });

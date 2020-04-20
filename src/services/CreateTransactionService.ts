@@ -2,12 +2,17 @@ import { getCustomRepository } from 'typeorm';
 import CreateCategoryService from './CreateCategoryService';
 import Transaction from '../models/Transaction';
 import TransactionRepository from '../repositories/TransactionsRepository';
+import AppError from '../errors/AppError';
 
 interface Request {
   title: string;
   value: number;
   type: 'income' | 'outcome';
   category: string;
+}
+
+interface Balance {
+  total: number;
 }
 
 class CreateTransactionService {
@@ -29,6 +34,15 @@ class CreateTransactionService {
       value,
       category_id: getCategory.id,
     });
+
+    const balance = transactionRepository.getBalance();
+
+    if (type === 'outcome' && value > (await balance).total) {
+      throw new AppError(
+        'You can not make an outcome higher than you balance',
+        400,
+      );
+    }
     await transactionRepository.save(transaction);
     return transaction;
   }
