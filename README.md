@@ -19,4 +19,6 @@ Desafio elaborado pela rocketseat para praticar os conhecimentos de banco de dad
 </ul>
 <h3>Ferramentas</h3>
 <p>Insomnia: Possibilita testar nossas rotas durante o desenvolvimento simulando as requisições que viriam do Front-End.</p>
-<p>DBeaver: Software para visualizar as conexões existentes no seu banco de dados.</p>
+<p>DBeaver: Software para visualizar as conexões existentes no seu banco de dados.
+
+![dbeaver](Dbeaver-6.gif)</p>
