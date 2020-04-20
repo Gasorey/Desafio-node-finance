@@ -7,7 +7,7 @@ export default class CreateCategory1587323000429 implements MigrationInterface {
         name: 'categories',
         columns: [
           {
-            name: 'category_id',
+            name: 'id',
             type: 'uuid',
             isPrimary: true,
             generationStrategy: 'uuid',
@@ -20,12 +20,12 @@ export default class CreateCategory1587323000429 implements MigrationInterface {
           },
           {
             name: 'created_at',
-            type: 'timestamp',
+            type: 'timestamp with time zone',
             default: 'now()',
           },
           {
             name: 'updated_at',
-            type: 'timestamp',
+            type: 'timestamp with time zone',
             default: 'now()',
           },
         ],

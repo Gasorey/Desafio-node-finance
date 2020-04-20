@@ -21,7 +21,7 @@ class Transaction {
   @Column('varchar')
   type: 'income' | 'outcome';
 
-  @Column('float')
+  @Column('integer')
   value: number;
 
   @Column('varchar')

@@ -1,12 +1,12 @@
 import { getCustomRepository } from 'typeorm';
 import CreateCategoryService from './CreateCategoryService';
-
+import Transaction from '../models/Transaction';
 import TransactionRepository from '../repositories/TransactionsRepository';
 
 interface Request {
   title: string;
   value: number;
-  type: string;
+  type: 'income' | 'outcome';
   category: string;
 }
 
@@ -25,9 +25,9 @@ class CreateTransactionService {
 
     const transaction = transactionRepository.create({
       title,
-      value,
       type,
-      category: getCategory.id,
+      value,
+      category_id: getCategory.id,
     });
     await transactionRepository.save(transaction);
     return transaction;

@@ -9,10 +9,9 @@ import ImportTransactionsService from '../services/ImportTransactionsService';
 const transactionsRouter = Router();
 
 transactionsRouter.get('/', async (request, response) => {
-  const transactionsRepository = getCustomRepository(TransactionsRepository);
-  const transactions = await transactionsRepository.find();
-
-  return response.json(transactions);
+  // const transactionsRepository = getCustomRepository(TransactionsRepository);
+  // const transactions = await transactionsRepository.find();
+  // return response.json(transactions);
 });
 
 transactionsRouter.post('/', async (request, response) => {
@@ -25,6 +24,7 @@ transactionsRouter.post('/', async (request, response) => {
     type,
     category,
   });
+  return response.json(transaction);
 });
 
 transactionsRouter.delete('/:id', async (request, response) => {

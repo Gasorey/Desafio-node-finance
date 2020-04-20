@@ -20,7 +20,7 @@ export default class CreateTransactions1587322132725
           },
           {
             name: 'value',
-            type: 'float',
+            type: 'integer',
           },
           {
             name: 'type',
@@ -29,15 +29,16 @@ export default class CreateTransactions1587322132725
           {
             name: 'category_id',
             type: 'uuid',
+            isNullable: true,
           },
           {
             name: 'created_at',
-            type: 'timestamp',
+            type: 'timestamp with time zone',
             default: 'now()',
           },
           {
             name: 'updated_at',
-            type: 'timestamp',
+            type: 'timestamp with time zone',
             default: 'now()',
           },
         ],
