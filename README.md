@@ -6,6 +6,8 @@ Desafio elaborado pela rocketseat para praticar os conhecimentos de banco de dad
 </p>
 <h2>Estrutura do projeto</h2>
 
+![estrutura](Estrutura.png)
+
 <h3>Techs</h3>
 <ul>
   <li>NodeJS</li>
