@@ -6,6 +6,8 @@ Desafio elaborado pela rocketseat para praticar os conhecimentos de banco de dad
 </p>
 <h2>Estrutura do projeto</h2>
 
+![estrutura](Estrutura.png)
+
 <h3>Techs</h3>
 <ul>
   <li>NodeJS</li>
@@ -17,4 +19,6 @@ Desafio elaborado pela rocketseat para praticar os conhecimentos de banco de dad
 </ul>
 <h3>Ferramentas</h3>
 <p>Insomnia: Possibilita testar nossas rotas durante o desenvolvimento simulando as requisições que viriam do Front-End.</p>
-<p>DBeaver: Software para visualizar as conexões existentes no seu banco de dados.</p>
+<p>DBeaver: Software para visualizar as conexões existentes no seu banco de dados.
+
+![dbeaver](Dbeaver-6.gif)</p>
