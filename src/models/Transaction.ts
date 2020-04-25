@@ -21,11 +21,10 @@ class Transaction {
   @Column('varchar')
   type: 'income' | 'outcome';
 
-  @Column('integer')
+  @Column('decimal')
   value: number;
 
-  @ManyToOne(() => Category)
-  @JoinColumn({ name: 'category_id' })
+  @Column()
   category_id: string;
 
   @CreateDateColumn()
@@ -33,6 +32,10 @@ class Transaction {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  @ManyToOne(() => Category, category => category.transaction, { eager: true })
+  @JoinColumn({ name: 'category_id' })
+  category: Category;
 }
 
 export default Transaction;

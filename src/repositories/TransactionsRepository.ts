@@ -20,11 +20,11 @@ class TransactionsRepository extends Repository<Transaction> {
     });
 
     const income = getIncome.reduce((acc, objeto) => {
-      return acc + objeto.value;
+      return acc + Number(objeto.value);
     }, 0);
 
     const outcome = getOutcome.reduce((acc, objeto) => {
-      return acc + objeto.value;
+      return acc + Number(objeto.value);
     }, 0);
 
     const total = income - outcome;
